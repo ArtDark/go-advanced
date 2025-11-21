@@ -1,44 +1,44 @@
-# Бинарные файлы Go
+# Go binary files
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
 
-# Объектные файлы Go
+# Go object files
 *.o
 *.a
 *.out
 
-# Тестовые файлы Go
+# Go test files
 *.test
 
-# Вывод сборки Go
+# Go build output
 __debug_bin
 
-# Директории сборки Go
+# Go build directories
 bin/
 pkg/
 src/
 
-# Зависимости Go, управляемые модулями
-# Обычно не включаются в репозиторий, если используются модули Go
+# Go module dependencies
+# Usually not included in repository when using Go modules
 vendor/
 
-# Конфигурационные файлы IDE
+# IDE configuration files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Логи и временные файлы
+# Log and temporary files
 *.log
 *.tmp
 .DS_Store
 
-# Переменные окружения и локальные конфиги
+# Environment variables and local configs
 .env
 .env.local
 
-# Файлы документации, генерируемые автоматически
+# Auto-generated documentation files
 docs/_build/
