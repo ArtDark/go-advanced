@@ -42,3 +42,6 @@ vendor/
 
 # Auto-generated documentation files
 docs/_build/
+
+
+.codeassistantmodes
