@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/ArtDark/go-advanced/internal/config"
+	"github.com/ArtDark/go-advanced/pkg/responses"
 )
 
 type AuthHandlerDeps struct {
@@ -19,13 +20,17 @@ func NewAuthHandler(mux *http.ServeMux, deps AuthHandlerDeps) {
 	h := AuthHandler{
 		deps.Auth,
 	}
-	mux.HandleFunc("GET /auth/login", h.Login())
+	mux.HandleFunc("POST /auth/login", h.Login())
 	mux.HandleFunc("POST /auth/regster", h.Register())
 }
 
 func (h *AuthHandler) Login() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(fmt.Sprintf("Login\nSecret: %s", h.Secret)))
+		data := LoginResponse{
+			Token: "123",
+		}
+		responses.Json(w, data, http.StatusOK)
 	}
 }
 
